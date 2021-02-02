@@ -1,14 +1,20 @@
-#include <stdio.h>
-int main ()
+#include<stdio.h>
+void main()
 {
-int i, j;
-  for(i=1;i<13;i++){
-  
-  for(j=1;j<13;j++){
-  
-       printf("%d x %d = %d\n",i,j,i*j);
-   }
-}
-	   return 0;
-getch();
+	int m, n, nostudent, noscore;
+	float score, total, average;
+	scanf("%d%d", &nostudent, &noscore);
+	for(n = 1; n <= nostudent; n++)
+	{
+		total = 0;
+		printf("student %d\n", n);
+		for(m = 1; m <= noscore; m++)
+		{
+		    scanf("%f", &score);
+		    printf("%f", score);
+		    total = total + score;
+		}
+		average = total / noscore;
+		printf("\nThe average of student %d is %f n",n,average);
+	}
 }
